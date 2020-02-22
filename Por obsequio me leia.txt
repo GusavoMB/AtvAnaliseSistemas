@@ -1,0 +1,1 @@
+Senhores, caso queiran estilizar as paginas com css, coloquem os arquivos .css na pasta public, se não, não funfa.
