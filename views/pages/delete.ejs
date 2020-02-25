@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Cadastro Hospitalar</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script language = "javascript" src="delete.js" ></script>
-    <title>Document</title>
-</head>
-<body>
+<%- contentFor('body') %>
+ <!-- <i class="material-icons">face</i> -->
+<div class= 'container' id = 'gerenciar'>
+   <h2 id='titulo'>Gerenciamento de Clientes</h2>
+   <div id='ajuda'>
+        <button id='botaoAjuda'class="btn btn-primary" type="submit">?</button>
+   </div>
     
-</body>
-</html>
+        <div class="border" id='clientes'>
+            <!-- loop fica aqui -->
+            <div class="card">
+                <div id = 'cliente'class="card-body">
+                    <div id = 'itemCliente'>
+                        <i class="material-icons md-48">account_circle</i>
+                    </div>
+                    <h5 id = 'nome' class="text-left">
+                        Moises almeida da cruz Farias
+                    </h5>
+                    <div id='deletar'>
+                        <button id='deletarBotao'class="btn btn-danger" type="submit">excluir</button>
+                    </div>
+                </div>
+              </div>
+        </div>
+</div>

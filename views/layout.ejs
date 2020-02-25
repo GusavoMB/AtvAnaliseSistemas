@@ -3,20 +3,22 @@
 <!-- Cria um layout padrão das paginas, e quando é chamado uma tela somente o body é carregado-->
 <head>
     <meta charset="UTF-8">
-    <title>Utilizando o EJS</title>
+    <title>Sistema Hospitalar</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href=" https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" />
+    <link rel="stylesheet" href="  https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js" />
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 </head>
-<body>
-  <header>
+<body class=col-xs-12>
+  <header id = 'Iheader'>
   </header>  
-
    <main>
-    <div class="container col-lg-5 col-sm-10 col-md-6" id="main_container">
+    <div >  
       <%- body %>
-     </div>
+    </div>
    </main>
 </body>
 </html>  

@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.render('pages/cadastro');
 })
 
+app.get('/gerenciar', (req, res) => {
+    res.render('pages/delete');
+})
+
 
 app.use(express.static(__dirname + '/public'))
 //Setando a porta em que a pagina irá se encontrar
