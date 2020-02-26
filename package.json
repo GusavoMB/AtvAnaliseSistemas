@@ -1,0 +1,15 @@
+{
+  "name": "AtvAnaliseSistemas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Juniorlpes/AtvAnaliseSistemas.git",
+  "author": "Moises1605 <56726033+Moises1605@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mysql": "^2.18.1"
+  }
+}
