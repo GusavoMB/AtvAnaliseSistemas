@@ -4,13 +4,15 @@ const bodyParser = require('body-parser');
 var expressLayouts = require('express-ejs-layouts')
 const BD = require('./comunictation'); 
 const mysql = require('mysql'); 
+const cliente = require('./model');
 //Configuração npm 
     //template engine
     app.set('view engine', 'ejs');// Setamos que nossa engine será o ejs
     app.use(expressLayouts);
     app.use(bodyParser.urlencoded({extended:false}));
     app.use(bodyParser.json());
-//rota inicial(teste)
+
+//rota inicial, cadastro.
 app.get('/', (req, res) => {
     res.render('pages/cadastro');
 })
@@ -19,18 +21,29 @@ app.get('/gerenciar', (req, res) => {
     res.render('pages/delete');
 })
 
+//mensagem de usuário cadastrado
 app.post('/sucess',(req,res) => {
-    const nome = req.body.nome;
-    const cpf = req.body.cpf;
-    const idade = req.body.idade;
-    const telefone = req.body.telefone;
-    const sintomas = req.body.sintomas;
-    BD.CadastrarCliente(res,cpf,nome,idade,telefone,sintomas);
-    res.send("Cadastro realizado com sucesso");
+    const Nome = req.body.nome;
+    const Cpf = req.body.cpf;
+    const Idade = req.body.idade;
+    const Telefone = req.body.telefone;
+    const Sintomas = req.body.sintomas;
+    cliente.create({
+        cpf:Cpf,
+        nome:Nome,
+        idade: Idade,
+        telefone: Telefone,
+        descricao:Sintomas
+
+    }).then(function(){
+        res.render('pages/sucess'); 
+    }).catch(function(erro){
+        res.send("falhou");
+    })
+ 
 })
 
-app.get('/clientes', (req, res) =>{
-    res.send("trabalhando");
+app.get('/clientes', async (req, res) =>{
 })
 
 
