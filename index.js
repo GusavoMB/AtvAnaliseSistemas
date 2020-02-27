@@ -12,8 +12,13 @@ const cliente = require('./model');
     app.use(bodyParser.urlencoded({extended:false}));
     app.use(bodyParser.json());
 
-//rota inicial, cadastro.
-app.get('/', (req, res) => {
+app.get('/',(req,res) => {
+    res.render('pages/home');
+})
+
+
+//rota de cadastro.
+app.get('/cadastro', (req, res) => {
     res.render('pages/cadastro');
 })
 
