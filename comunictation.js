@@ -5,10 +5,10 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
     host:'localhost',
-    port:3306,
+    port:3307,
     user:'root',
-    password:'',
-    database:'tarefas'
+    password:'123456789',
+    database:'analise'
 });
 
 connection.connect(function(err){
@@ -65,10 +65,10 @@ function deletarCliente(res,cpf){
 
     const connection = mysql.createConnection({
       host:'localhost',
-      port:3306,
+      port:3307,
       user:'root',
-      password:'',
-      database:'tarefas'
+      password:'123456789',
+      database:'analise'
     });
   
     connection.query(`DELETE from hospital where cpf = '${cpf}' `,res);

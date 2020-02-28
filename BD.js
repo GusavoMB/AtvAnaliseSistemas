@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('tarefas','root','',{
+const sequelize = new Sequelize('analise','root','123456789', {
+    port: '3307',
     host:"localhost",
     dialect: "mysql"
 })
@@ -7,7 +8,7 @@ const sequelize = new Sequelize('tarefas','root','',{
 sequelize.authenticate().then(function(){
     console.log("Conectado com sucesso");
 }).catch(function(erro){
-    console.log("falhou");
+    console.log(erro);
 }) 
 
 module.exports = {
