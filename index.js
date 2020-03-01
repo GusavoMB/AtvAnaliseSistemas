@@ -2,7 +2,6 @@ const express = require('express');
 const app = express(); 
 const bodyParser = require('body-parser');  
 var expressLayouts = require('express-ejs-layouts')
-const BD = require('./comunictation'); 
 const mysql = require('mysql'); 
 const cliente = require('./model');
 
@@ -103,6 +102,10 @@ app.get('/cliente/:cpf', async (req, res) =>{
     }).catch(function(error){
         res.render('pages/errorEditar');
     })
+})
+
+app.get("/test", function(req, res){
+    res.render("pages/ajudaCadastro");
 })
 
 //rota responsável por deletar um usuário. o parametro cpf será o cpf do paciente.
