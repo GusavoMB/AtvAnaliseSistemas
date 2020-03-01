@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro Hospitalar</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body> -->
+		
+		<%- contentFor('body') %>
+		<%- gg()%>
+		<div id = "main_container" class="container col-lg-6 col-sm-10 col-md-6">
+		<div class="card " id = 'carde'>
+			<div class="card-body">
+			<h3 id = 'cadTitulo'>Informe os dados do Paciente<a id = 'cadbotao' data-toggle="tooltip" data-placement="top" title="Tela de ajuda" target="_blank" class="btn btn-primary" href="/test" role="button">?</a></h3>
+				<form  id = 'formulario' method="POST" action="/sucess">
+					<div class="form-row">
+						<div class="form-group col-md-8">
+							<label for="nome">Nome:</label> 
+							<input type="text" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required placeholder="Nome"  class="form-control"> 
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Apenas letras.
+							</small>
+						</div>
+
+						<div class="form-group col-md-4">
+							<label for="inputEstado">Sexo</label>
+							<input type="text" name="sexo" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required placeholder="sexo"  class="form-control"> 
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Masculino ou feminino.
+							</small>
+						  </div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="cpf">CPF:</label> 
+							<input  onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="11"  maxlength="11" name="cpf" required placeholder="CPF" class="form-control"> 
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Somente números,deve conter 11 dígitos.
+							</small>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="idade">Idade:</label> 
+							<input type="number" min="0" max="200" name="idade" required placeholder="Idade" class="form-control">
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Idade mínima 0, idade máxima 200.
+							</small>
+						</div>
+
+					</div>
+
+					<div class="form-group">
+						<label for="inputAddress">Endereço</label>
+						<input required type="text" class="form-control" name="endereco" placeholder="Rua ou Avenida,número,bairro">
+					</div>
+					
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="telefone">Telefone:</label> 
+							<input onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="8"  maxlength="9" name="telefone" required placeholder="XXXX-XXXX" class="form-control"> 
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Siga o modelo, apenas números. Sem o DDD
+							</small>
+						</div>
+
+						<div class="form-group col-md-8">
+							<label for="inputEmail4">Email</label>
+							<input type="email" required class="form-control" name="email" placeholder="Email">
+						  </div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="Responsável">Nome do Responsável:</label> 
+							<input type = 'text'  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" name="responsavel" placeholder="Nome do responsável" class="form-control"> 
+							<small id="passwordHelpBlock" class="form-text text-muted">
+								Para menores de idade, é obrigatorio ter o nome  e o telefone do responsável
+							</small>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="medico">Médico Responsável</label>
+							<input type="text"  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" class="form-control" name="medico" placeholder="Médico">
+						  </div>
+					</div>
+
+					<div class="form-group col-md-8">
+						<label for="telefone">Telefone do responsável:</label> 
+						<input onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="8"  maxlength="9" name="resTelefone"  placeholder="XXXX-XXXX" class="form-control"> 
+						<small id="passwordHelpBlock" class="form-text text-muted">
+							Siga o modelo, apenas números. Sem o DDD.
+						</small>
+					</div>
+
+
+					<div class="form-group">
+						<label for="sintomas">Sintomas:</label> 
+						<textarea class="form-control"   name="sintomas" rows="3" placeholder="Opcional"></textarea>
+					</div>
+
+					<button class="btn btn-primary"  type="submit">Cadastrar</button>
+					
+				</form>
+			</div>
+		</div>
+		</div>
+<!-- </body>
+</html> --> 
+<%function gg(){%>
+	<%console.log("oi")%>
+<%}%>

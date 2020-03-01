@@ -1,12 +1,51 @@
 #main_container{
-	margin-top: 30px
+	/* margin-top: 20px */
 } 
+#help{
+	padding-left: 100px;
+}
 
-#titulo{
+#ajudaCard{
+	margin: 10px;
+}
+
+#cadbotao{
+	float: right;
+}
+
+#cadtitulo{
 	float: left;
 }
 
+#formulario{
+	clear: both;
+}
+
+#cardHome{
+	height: 5vh;
+}
+
+#content{
+	background-image: url('/home2.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#home{
+	/* background-image: url('/home2.jpg');
+	background-position: center;
+	background-size: cover; */
+	/* background-color: rgb(190, 240, 240); */
+	height: 88vh; 
+}
+
+#titulo{
+	float: left;
+	margin: 10px 0 0 30px;
+}
+
 #ajuda{
+	margin: 10px 0 0 0;
 	float: right;
 }
 
@@ -22,10 +61,17 @@
 	height: 12vh;
 }
 
+#page{
+	margin-top: 20px;
+	margin-left: 50px;
+	position: center;
+}
+
 #clientes{
 	clear: both;
 	padding: 20px;
 	width: 95%;
+	margin: 80px 0 0 0;
 	margin-left: auto;
     margin-right: auto;
 }
@@ -38,9 +84,9 @@
 	float: left;
 	margin-top: 4px;
 }
+
 #deletarBotao{
-	float: right;
-	margin: 0 0 0 550px;
+	margin: 10px
 }
 
 #cliente{
@@ -49,9 +95,17 @@
   	align-items: center 
 }
 
+#cliCard{
+	margin: 10px;
+}
+
+#deletar{
+	float: right;	
+	position: right;
+}
+
 #gerenciar{
 	clear: both;
-	margin-top: 10px;
 	height: 98vh;
 	background-color: white;
 	/* border-width: 1px;
@@ -61,7 +115,7 @@
 }
 
 #sucess{
-	margin-top: 20px;
+	/* //margin-top: 20px; */
 }
 
 @font-face {
