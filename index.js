@@ -152,7 +152,7 @@ app.post('/atualizar',function(req,res){
 
 app.use(express.static(__dirname + '/public'))
 //Setando a porta em que a pagina irá se encontrar
-app.listen(8081,function(){
+app.listen(process.env.PORT || 5000){}
     console.log("Servidor rodando");
 });
 
